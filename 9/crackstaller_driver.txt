@@ -1,0 +1,183 @@
+FLOSS static ASCII strings
+!This program cannot be run in DOS mode.
+Rich
+.text
+h.data
+.pdata
+H.info
+INIT
+RSDS1i:
+UUf9<$tr
+wVA2
+$r	f
+L$ I
+D$PH
+L$PH9H
+D$PH
+D$(H
+D$0H
+T$(H
+HSVWH
+u'D;
+u"A;
+ _^[
+HSWH
+L$@I
+D$@L
+\$0A
+L$PI
+T$@H
+IoDeleteDevice
+IoDeleteSymbolicLink
+RtlInitUnicodeString
+IofCompleteRequest
+MmGetSystemRoutineAddress
+IoCreateSymbolicLink
+IoCreateDevice
+ntoskrnl.exe
+>0<0
+0!0	
+Western Cape1
+Durbanville1
+Thawte1
+Thawte Certification1
+Thawte Timestamping CA0
+121221000000Z
+201230235959Z0^1
+Symantec Corporation100.
+'Symantec Time Stamping Services CA - G20
+"W*o
+]jxdE
+`F~T
+&0$0"
+http://ocsp.thawte.com0
+80604
+.http://crl.thawte.com/ThawteTimestampingCA.crl0
+TimeStamp-2048-10
+y@b%
+Symantec Corporation100.
+'Symantec Time Stamping Services CA - G20
+121018000000Z
+201229235959Z0b1
+Symantec Corporation1402
++Symantec Time Stamping Services Signer - G40
+2oNW
+a;EQ
+g0e0*
+http://ts-ocsp.ws.symantec.com07
++http://ts-aia.ws.symantec.com/tss-ca-g2.cer0<
+50301
++http://ts-crl.ws.symantec.com/tss-ca-g2.crl0(
+TimeStamp-2048-20
+b07x
+,&c3
+\vnO^
+EFAn
+y3+.{
+>"hcS
+Symantec Corporation1
+Symantec Trust Network100.
+'Symantec Class 3 SHA256 Code Signing CA0
+160502000000Z
+170502235959Z0
+Osaka1
+Chuo-ku1
+CAPCOM Co.,Ltd.1%0#
+R&D Asset Management Section1
+CAPCOM Co.,Ltd.0
+gGt3	a
+Njd<
+[BCO
+<8d2
+p;Z.Rf<^
+$0"0 
+http://sv.symcb.com/sv.crl0a
+Z0X0V
+0L0#
+https://d.symcb.com/cps0%
+https://d.symcb.com/rpa0
+K0I0
+http://sv.symcd.com0&
+http://sv.symcb.com/sv.crt0
+;>UK
+M.;Y
+wgbLO
+r@x"
+;~/V
+un	yz
+VeriSign, Inc.1
+VeriSign Trust Network1:08
+1(c) 2006 VeriSign, Inc. - For authorized use only1E0C
+<VeriSign Class 3 Public Primary Certification Authority - G50
+131210000000Z
+231209235959Z0
+Symantec Corporation1
+Symantec Trust Network100.
+'Symantec Class 3 SHA256 Code Signing CA0
+XM#bj
+1-=n
++ojr\`
+#0!0
+http://s2.symcb.com0
+e0c0a
+0R0&
+http://www.symauth.com/cps0(
+http://www.symauth.com/rpa00
+)0'0%
+http://s1.symcb.com/pca3-g5.crl0
+SymantecPKI-1-5670
+3130
+5/3X
+Washington1
+Redmond1
+Microsoft Corporation1)0'
+ Microsoft Code Verification Root0
+110222192517Z
+210222193517Z0
+VeriSign, Inc.1
+VeriSign Trust Network1:08
+1(c) 2006 VeriSign, Inc. - For authorized use only1E0C
+<VeriSign Class 3 Public Primary Certification Authority - G50
+CcjRK
+{]KV
+3130
+	TPk
+N0L0J
+Dhttp://crl.microsoft.com/pki/crl/products/MicrosoftCodeVerifRoot.crl0
+,N<jPl
+3BH8Q:|8
+$"(@
+:'jI
+#(2v
+wha3
+\J$jg
+Symantec Corporation1
+Symantec Trust Network100.
+'Symantec Class 3 SHA256 Code Signing CA
+V%qf`
+.:;2
+$,	K
+Vv!V5:
+XNNK
+0r0^1
+Symantec Corporation100.
+'Symantec Time Stamping Services CA - G2
+160906050321Z0#
+gcst
+s~@4
+.#AG
+euwn
+
+FLOSS static UTF-16 strings
+\DosDevices\
+\Device\
+
+
+FLOSS decoded 3 strings
+Htsysm72FB
+Htsysm72FB
+Htsysm72FB
+
+FLOSS extracted 0 stackstrings
+
+Finished execution after 0.296470 seconds

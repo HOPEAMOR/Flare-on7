@@ -1,0 +1,457 @@
+FLOSS static ASCII strings
+!This program cannot be run in DOS mode.
+Rich_n
+.text
+h.rdata
+H.data
+.pdata
+H.edata
+@INIT
+b.reloc
+D$pH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+T$xH
+|$xH
+D$@`y
+D$@3
+HcD$ HcL$ H
+D$$%
+HcL$ H
+T$xH
+HcL$ H
+T$xH
+HcL$ H
+T$xH
+HcL$ H
+T$xH
+L$ L
+L$HL
+D$@H
+T$8H
+L$ L
+D$hH
+FLARH
+D$ H
+D$ H
+D$(H
+D$ H
+D$PH
+D$@H
+D$@H
+D$0H
+L$PH
+L$0L
+D$ H
+D$X`y
+D$X3
+L$0H
+D$0H
+D$H@
+D$HH
+D$8H
+D$``y
+D$`3
+L$8L
+D$ H
+D$8H
+H+D$8H
+H9D$(t$H
+t$(H
+FLARH
+L$ L
+D$XH
+D$XH
+D$``y
+D$`3
+D$(3
+D$,3
+D$03
+D$43
+D$83
+D$<3
+D$@3
+D$D3
+D$H3
+D$L3
+D$P3
+D$T3
+L$ L
+D$XH
+L$@H
+D$(H
+D$HH
+L$PH
+D$PH
+L$PH
+D$@H
+D$@H
+D$HH
+L$HH
+D$ `y
+D$ 3
+D$(H9D$@r
+D$ H
+x@8s9
+D$ H
+|$ 8s
+D$ H
+D$ H
+|$ @s
+D$ H
+D$@H
+D$@H
+|$@3
+L$@H
+L$@H
+L$@H
+D$@H
+D$@H
+D$@H
+D$@H
+D$@H
+D$@H
+D$@H
+D$@H
+L$ H
+D$ H;D$Psv
+D$ H
+T$@L
+D$HA
+x@@u6H
+D$@H
+D$@H
+L$@H
+L$hH
+D$@H
+D$@H
+L$hH+
+D$HL
+L$(fA
+L$hH
+D$0H
+D$(9D$ 
+D$0H
+D$8H
+D$8H
+L$0H
+H9D$8
+D$HH
+L$hH
+D$HH
+T$hH
+D$,H
+D$HH
+D$(H
+D$(H
+D$HH
+D$(H
+D$PH
+D$(H
+D$XH
+D$(H
+D$`H
+D$(H
+D$pH
+D$(H
+D$hH
+D$(H
+T$`H
+D$8H
+FLAR
+T$HH
+D$0H
+L$8H
+D$@H
+L$(H
+|$0H
+D$ H
+9D$ s_
+D$ Hk
+L$ Hk
+T$(H
+T$ Hk
+|$0H
+T$0H
+T$0H
+L$0H
+D$xH
+T$x3
+FLARH
+D$$H
+L$PfA
+D$ H
+D$ H
+D$ H
+D$XH
+T$XH
+D$@H
+D$0H
+D$0H
+D$0H
+D$8H
+D$8H
+D$0H
+D$`H
+D$`H
+T$@H
+D$HH
+D$8H
+L$HH
+D$(H
+L$$H
+D$$A
+FLAR
+D$0H
+L$$H
+D$ H
+L$$3
+L$@H;
+D$ Hi
+L$0H
+L$ Hi
+D$ Hi
+L$0H
+FLARH
+L$0H
+D$8H
+L$$E3
+L$hH
+D$(H
+L$hH
+D$0H
+L$hH
+D$@H
+L$hH
+D$ H
+9D$ sl
+D$ H
+L$hH
+D$8H
+D$pH
+L$8H+
+D$ H
+L$hH
+D$HH
+D$`H
+D$`H
+D$PL
+D$@H
+D$@H
+D$0H
+D$8H
+T$8H
+D$0H
+D$0H
+D$XH
+D$HH
+D$HH
+D$HH
+D$HH
+D$XH
+D$XH
+D$XH
+D$XH
+D$@H
+D$@H
+D$XH
+D$@H
+FLAR
+D$`H
+L$`f
+L$@f
+D$`H
+L$`H
+D$XH
+D$`H
+D$XH
+D$xH
+FLARH
+D$pH
+|$p3
+L$xH
+|$pH
+9D$hs
+D$xH
+D$XH
+D$ E3
+D$PH
+D$ E3
+D$XL
+D$PH
+D$XH
+D$XH
+D$HH
+D$0H
+D$(H
+D$HH
+D$HH
+D$HH
+D$HH
+D$PH
+D$(9
+D$0H
+D$@L
+T$8H
+L$@H
+L$@f
+D$8H
+L$@f
+D$@H
+D$0H
+9D$ s
+L$ f
+D$0H
+expand 32-byte k
+expand 16-byte k
+vRQ>
+8STs
+LwH'
+RSDS(
+.text$mn
+.text$mn$00
+.text$s
+.idata$5
+.00cfg
+.rdata
+.rdata$zzzdbg
+.xdata
+.data
+.bss
+.pdata
+.edata
+INIT
+.idata$2
+.idata$3
+.idata$4
+.idata$6
+<g~{<it
+*ByJ=8~[Y
++7zQS?
+WML}P5
+G$;>}*7
+S=OzD6
+!HVx[E
+(M}P
+driver.sys
+DriverBootstrap
+D$XH
+D$pH
+D$pH
+D$`L
+D$PH
+D$PH
+D$HH
+D$HH
+D$HH
+D$ L
+T$XH
+D$@H
+\$0H
+KeDelayExecutionThread
+ExAllocatePoolWithTag
+ExFreePoolWithTag
+wcsstr
+RtlCopyUnicodeString
+RtlAppendUnicodeStringToString
+RtlAppendUnicodeToString
+KeInitializeEvent
+KeSetEvent
+KeWaitForSingleObject
+ExAcquireFastMutex
+ExReleaseFastMutex
+CmUnRegisterCallback
+CmRegisterCallbackEx
+CmCallbackGetKeyObjectID
+MmGetSystemRoutineAddress
+PsCreateSystemThread
+IoCreateDevice
+IoDeleteDevice
+ObReferenceObjectByHandle
+ZwClose
+ZwCreateKey
+ntoskrnl.exe
+
+FLOSS static UTF-16 strings
+
+Unwind Info Version: 2 (bailing on .pdata)
+
+FLOSS decoded 13 strings
+V?tK
+`uA?nT
+j"9S
+b~LV;
+V?tK
+`uA?nT
+j"9S
+b~LV;
+V?tK
+`uA?nT
+j"9S
+b~LV;
+}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&?:}(5}&
+
+FLOSS extracted 0 stackstrings
+
+Finished execution after 6.356648 seconds

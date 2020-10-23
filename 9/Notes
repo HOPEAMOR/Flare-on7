@@ -1,0 +1,12 @@
+driver1 also named cfs.dll, using handle Htsysm72FB, looks to be capcom.sys.
+driver1 has no exports
+driver2 exports DriverBootstrap
+
+
+the com dll extends iUnknown and you can see that in the vftable because you can see the iUnknown methods, then you can see 2 custom functions. the first takes data out of Password regkey and generates an Rc4 S-box out of the data then puts it into a passed in buffer. the second function takes the S-box as an argument and decrypts some hardcoded data and places it into the Flag regkey.
+
+the driver that gets loaded decrypts the data that is expected to be in Password and leaves it in a stack buffer until that stack frame is destroyed. so to get it, you need to get lucky on a kernel memory dump or debug the kernel and view that buffer after the decryption.
+
+H@n $h0t FiRst!
+S0_m@ny_cl@sse$_in_th3_Reg1stry@flare-on.com
+

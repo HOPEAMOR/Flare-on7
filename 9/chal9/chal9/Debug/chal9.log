@@ -1,0 +1,6 @@
+﻿  chal9.cpp
+C:\Users\Suzy\source\repos\chal9\chal9\chal9.cpp(8,1): warning C4003: not enough arguments for function-like macro invocation 'DEFINE_GUID'
+C:\Users\Suzy\source\repos\chal9\chal9\chal9.cpp(22,80): error C2664: 'HRESULT CoCreateInstance(const IID &,LPUNKNOWN,DWORD,const IID &,LPVOID *)': cannot convert argument 1 from 'LPCLSID' to 'const IID &'
+C:\Users\Suzy\source\repos\chal9\chal9\chal9.cpp(22,80): message : Reason: cannot convert from 'LPCLSID' to 'const IID'
+C:\Users\Suzy\source\repos\chal9\chal9\chal9.cpp(22,80): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\combaseapi.h(1041,1): message : see declaration of 'CoCreateInstance'

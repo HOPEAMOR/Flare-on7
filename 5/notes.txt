@@ -1,0 +1,11 @@
+34.6252000°, -097.2117000°
+
+App.Desc, App.Password, App.Note, and App.Step all need to be set
+App.Note is set by the description of the first todo entry, which changes based on based on geo coordinates
+App.Desc is based off of 05.jpg, but is only set if the indexof the currentpage == 4
+App.Password appears to be set by logging in.
+App.Step is set by the pedometer step counter over 50
+
+if the pedometer is updated and all the above are set, tiger2.png will be unpacked and displayed.
+
+

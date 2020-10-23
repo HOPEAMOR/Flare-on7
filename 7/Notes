@@ -1,0 +1,12 @@
+1. the challenge gives you a wireshark dump of an exploit being run against a vulnerable IIS server. two of the tcp conversations are abnormal and look to be a successful exploit
+2. the exploit drops encoded shellcode matching logic in article https://www.fortinet.com/blog/threat-research/buffer-overflow-attack-targeting-microsoft-iis-6-0-returns
+3. decoding that with decode.py gives a bit of shellcode(decoded_payload.bin and just_shellcode.bin) which will connect to a specific host on a specific port and download the next stage. this stage is rc4 decrypted with key "killervulture123" and executed
+4. the next stage will grab C:\accounts.txt, find the location of "intrepidmango" which acts as an end delimeter. it will then rc4 encrypt the contents of accounts.txt with a pregenerated rc4 context saved in the shellcode.
+
+I used jmp2it to get straight to the shellcode
+I used scdbg to skip past a lot of static reversing and get straight to the parts of code that are interesting.
+
+rc4 contains code to decrypt payload1.bin and payload2.bin
+
+netcat server
+nc -l -p 4444 < payload1.bin

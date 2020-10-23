@@ -1,0 +1,110 @@
+FLOSS static ASCII strings
+/lib64/ld-linux-x86-64.so.2
+libc.so.6
+socket
+__stpcpy_chk
+readdir
+fopen
+perror
+connect
+closedir
+__stack_chk_fail
+__lxstat
+strtok
+send
+chdir
+recv
+fclose
+opendir
+getauxval
+getline
+__cxa_finalize
+_IO_getc
+__libc_start_main
+free
+GLIBC_2.16
+GLIBC_2.3.4
+GLIBC_2.4
+GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+AWAV
+AUAT1
+\$@H
+496b9b4b
+L$@H
+D$J.ed5
+D$8H
+D$0H
+        H
+ t/A
+X wins!
+O wins!
+|$(I
+|$0H
+|$0H
+\$ H
+C0D5
+C0D5
+C0D5
+|$0H
+T$ H
+|$0H
+|$0H
+|$0H
+C0T5
+@flare-o
+n.coH
+ft/H
+C0T5
+[]A\A]A^A_
+< t	:B
+ t	@:=
+AWAVI
+AUATL
+[]A\A]A^A_
+socket
+connect
+/proc/modules
+cpufreq_
+/proc/mounts
+/proc/version_signature
+/proc
+It's a draw!
+;*3$"
+GCC: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.bss
+.comment
+
+FLOSS static UTF-16 strings
+@8	@
+
+
+FLOSS decoded 0 strings
+
+FLOSS extracted 0 stackstrings
+
+Finished execution after 0.000508 seconds

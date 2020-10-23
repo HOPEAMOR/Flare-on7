@@ -1,0 +1,12 @@
+1. identify windows subsystem for linux using the embedded guids and install it
+
+
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+we can easy hot-patch the elf file that gets dropped by the exe because its unencrypted in the rsrc section. it would be harder to try to patch it and splice it in.
+
+answer:
+since the goal is to play tic-tac-toe and win, the goal should be to find the logic which plays for X. that is found at the top of main, first X will try to take the middle, then it will look for the player having 2 in a row anywhere, then it will try to take the corners. the simplest solution is to edit the logic that search for 2 in a row. i changed the 2 to a 3 for horizontal victories, thus making it too late by the time the computer would notice.
+
+c1ArF/P2CjiDXQIZ@flare-on.com

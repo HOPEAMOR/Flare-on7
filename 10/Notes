@@ -1,0 +1,245 @@
+1st part:
+
+key material
+6a 68 68 2f 2f 2f 73 68 2f 62 69 6e 89 e3 68 01 01 01 01 81 34 24 72 69 01 01 31 c9 51 6a 04 59 01 e1 51 89 e1 31 d2 6a 0b 58 cd 80 00 00 00 00
+
+hardcoded_cipher_byte_array
+64 a0 60 02 ea 8a 87 7d 6c e9 7c e4 82 3f 2d 0c 8c b7 b5 eb cf 35 4f 42 4f ad 2b 49 20 28 7c e0
+
+CHILD null signal param1 table:
+0x44de7a30 - xor both params
+0xa4f57126 - compare data to @no-flare.com flag
+0xb82d3c24 - add 1 to param2 and return that
+0x91bda628 - or/"add" param1 and param2
+0x6b4e102c - add param1 to param2 return that
+0x7e85db2a - return 0x9e3779b9 // this is an xxtea constant
+0x5816452a - strange data deobb on param1 and param2
+0x0804c257 - absolute jmp
+0x0804c3c4 - absolute jmp
+
+
+SIGNALS TABLE
+parent handler:
+SIGTRAP - parent control, used to control the flow of data
+SIGILL - illegal instruction, loads fake flag
+SIGSEGV - peekdata stuff, loads more data
+SIGINT - CONCH string?, might be the result of the stepchild debugging the child
+SIGTERM - Like a phoenix, i rise from the ashes
+SIGQUIT - winners never quit
+
+child handler:
+SIGSEGV - invalid memory reference, used to implement what looks like xxtea functionality.
+SIGINT - I HAVE THE CONCH string
+SIGALRM - POKEDATA alarm_flag
+SIGSTOP - continue if stopped
+
+
+https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#x86-32_bit
+SIGTRAP SYSCALL table:
+found: 1 for 0xb82d3c24 - exit
+found: 3 for 0x91bda628 - read - steal input with fgets
+found: 4 for 0x7e85db2a - write - implement write to stdout always
+found: 11 for 0xf7ff4e38 - execve - exec? fake or real? i think real.
+found: 15 for 0xab202240 - chmod - decrypt pathname with mode
+found: 34 for 0x3dfc1166 - nice - load string from obbed_string_struct2
+found: 54 for 0x2499954e - ioctl - oad string from obbed_string_struct
+found: 92 for 0x4a51739a - truncate - decode pathname compare with @no-flare.com
+found: 96 for 0x9678e7e2 - getpriority - return abs pokedata
+found: 97 for 0x83411ce4 - setpriority - load string from obbed_string_struct
+found: 122 for 0x9c7a9d6 - uname - load XXTEA crypto data into hostname
+found: 152 for 0xc93de012 - mlockall - mangle 2 words, return result
+found: 217 for 0xe8135594 - pivot_root - return arg2, preventing pivot_root
+
+found: 0x1 for 0xb82d3c24
+found: 0x3 for 0x91bda628
+found: 0x4 for 0x7e85db2a
+found: 0xb for 0xf7ff4e38
+found: 0xf for 0xab202240
+found: 0x22 for 0x3dfc1166
+found: 0x36 for 0x2499954e
+found: 0x5c for 0x4a51739a
+found: 0x60 for 0x9678e7e2
+found: 0x61 for 0x83411ce4
+found: 0x7a for 0x9c7a9d6
+found: 0x98 for 0xc93de012
+found: 0xd9 for 0xe8135594
+found: 0x80000001 for 0xb82d3c24
+
+
+SYSCALL PARAMETER ABI:
+EAX: syscall number
+EBX: first arg
+ECX: second arg
+EDX: third arg
+ESI: fourth arg
+EDI: fifth arg
+EBP: sixth arg
+
+
+TEA HASHES:
+e8, 2nd_hashed_string,  4b695809
+ec, hashed_string,      674a1dea
+both together make,     674a1dea4b695809
+
+
+Partial Flag:
+w3lc0mE_t0_Th3_l
+
+flag guess:
+w3lc0mE_t0_Th3_l4nD_0f_De4th_4nd_d3strUct1oN_4nd_n0_puppi3s@flare-on.com
+
+
+FAKE FLAGS:
+sunsh1n3_4nd_r41nb0ws@flare-on.com
+moc.eralf-on@gn1hs1n1f_n0_st4rgn0c
+elf_0n_a_sh3lf@on-flare.com
+okay_1_sw34r_th1s_1s_th3_r34l_0ne@no-flare.com
+not_a_fake_flag@no-flare.com
+fake_flag@no-flare.com
+sm0l_bin_b1g_h34rt@no-flare.com
+
+
+
+2nd part:
+
+static char truncate_pathname[40000]; 
+static int final_string_length == -1;
+static unsigned char hardcoded_ciphertext[0x40] = <data>;
+static char stolen_flag_buf[0x3e];
+
+int truncate_handler(char *path, int len){
+
+	char new_pathname_loc[16000];
+	
+	PEEKDATA(truncate_pathname, path); // copy data from path to truncate_pathname
+	
+	loop_counter = 0;
+	while (loop_counter < 40000 && truncate_pathname[loop_counter] != 0x00){ // while we're not at the end of our arr, and our current byte is not null
+		new_path_loc[loop_counter] = truncate_pathname[loop_counter];
+		
+		// set the final_string_length to the index of the first decrypted byte that does not equal our hardcoded text.
+		// this should always fail on the first character of the bee string if nothing else.
+		if (final_string_length == -1 && new_path_loc[loop_counter] != hardcoded_ciphertext[loop_counter]){
+			final_string_length = loop_counter;
+		}
+		loop_counter += 1
+	}
+	int fs_return = flare_searcher(stolen_flag_buf, final_string_length)
+	return fs_return; // this should be the same as final_string_length for a successful pass
+}
+
+// flare-searcher will return -1 for any failure, and a length for any successful match of @no-flare.com
+int flare_searcher(buf, length){
+	int return_var = length; // will be a positive number indicating length, or a -1 for a number of reasons.
+	if (length != -1){ // if at some point, we failed to match continue onward. if we only ever succeeded or never ran the test to begin with, then skip.
+		PEEKDATA(buf, stolen_flag_buf);
+		
+		int result = strncmp(stolen_flag_buf + 0x20, "@no-flare.com", 0xd);
+		if (result != 0){ // 0 indicates the strings are equal
+			return_var = -1;
+		}
+	}
+	return return_var;
+}
+
+int decrypt(){
+
+}
+
+
+
+the algorithm has the key embedded in it.
+the algorithm uses the same crypto constants as TEA and XTEA, but does not have many of the bitwise shifts. it may be horribly mangled though
+the truncated_pathname buffer has an "AAAAA" encrypted string and the bee movie script encrypted string in it. both of which decrypt if you do not overwrite them.
+the truncated_pathname buffer gets overwritten with your input data and the whole buffer is decrypted. 
+you input string has to decrypt to match a the data in a hardcoded comparison buffer.
+
+i dont know if i'm going to identify the algorithm or find the key correctly.
+i think the easiest thing to do would be to feed the data back through the algorithm, but my attempts to do that gave me garbage.
+there might be a flag or something to flip the algorithm, but i'm not seeing it.
+
+zvika makes it sound like i dont need to reverse the crypto? he seems quite avoidant of the crypto and yet he managed to solve it.
+he tries not to reverse crypto, so he likely didn't reverse crypto here. he does have a twitter post complaining about Z3 though.
+it seems like you would have to reverse the algorithm to pass it into a z3 solver. he may have used z3 for strange_data_ob specifically.
+he thinks the TEA constants are there to throw you off but "maybe i'm wrong..."
+he agrees that i should match the hardcoded comparison array after the "calculation"
+
+the operations done by chmod are complex but i think they could be reimplemented and brute forced. i would just need to get the relevant values from out_buf
+
+i think i could reverse(literally) the encryption algorithm if i can get chmod working correctly.
+you know what cipher2_working_dup and therefore cipher2_working are before the xor encryption.
+you also know what the result of the xor encryption is since its given to you in cipher2_working
+you dont know what the original value of uvar or cipher1_working are.
+you might be able to brute force that, just generate all combinations of uvar, create a corresponding cipher1_working, and do that again in a loop.
+the brute force method would generate a (2**32)*8 (or near that) results though. i would have to either grep through it with a dictionary or create a realtime search dictionary.
+or, if i get chmod working correctly, i can via the same method, i can generate uvar's and therefore crack any ciphertext with this key.
+
+i got it with the magic numbers by reimplementing the crypto, and generating uvar's.
+
+{0x4b695809, 0xf, 0x674a1dea, 0xe35b9b24, 0x11, 0xad92774c, 0x71adcd92, 0x11, 0x56c93ba6, 0x38d6e6c9, 0x11, 0x2b649dd3, 0x5a844444, 0xc, 0x8b853750, 0x2d422222, 0xc, 0x45c29ba8, 0x16a11111, 0xc, 0x22e14dd4, 0xcdbfbfa8, 0x15, 0x8f47df53, 0xe6dfdfd4, 0x15, 0x47a3efa9, 0xf36fefea, 0x15, 0x23d1f7d4, 0x79b7f7f5, 0x15, 0x11e8fbea, 0xfa34ccda, 0xf, 0x96c3044c, 0x7d1a666d, 0xf, 0x4b618226, 0xf8620416, 0xf, 0xbb87b8aa, 0x7c31020b, 0xf, 0x5dc3dc55, 0x78f7b625, 0x12, 0xb0d69793}
+
+1: take cipher1_working create a duplicate and name it cipher2_working_dup
+2: take cipher2_working_dup, xor it against uvar, receive cipher1_working
+3: do that 16 times
+
+
+
+3rd part:
+
+
+shellcode within the bee movie script. decode it to get the third part of the flag.
+a lot of the shellcode looks like crypto, but some of it can be recognized as libc functions.
+whatever the encryption/hashing is in the bee shellcode, it appears to act on 4 byte words.
+it looks like there is a comparison hash for whatever urandom outputs, then there is another for the input string. the input string hash is based on the urandom data.
+so reversing it is likely reversing the hashing algorithm to get urandom, then to get the input string.
+i actually think that the urandom data is completely pointless. the problem is, i couldn't reverse the code to get both the string and the urandom data. the 480022 hash looks like it was put in there to give you a hint at finding the urandom data, but the last function that is called to set the urandom comparison hash looks like it just copies the hardcoded hash. that would not help us for finding the original urandom data. also having urandom ACTUALLY update a hash to then get compared to a hardcoded hash would never pass. you'd never get past that check without some urandom trickery
+with that, it could be that the code using urandom to set the input string hash is not used. thus reversing the comparison hash to an input string would be trying to make my way around the useless code.
+
+i think there is a path to discovering urandom_buf in bee_crypto_wrap_wrap_update_arg1/2/4. 
+last_int_of_working_buf is based on urandom_buf and a hardcoded calculation. last_int_of_local_194 is a hardcoded calculation. if these are equal, then we raw memcpy buf to param1.
+then we have to match EDX+0x7c(last_int_of_working_permute_buf(after another function)) to last_int_of_local_buf_114 which is hardcoded, to get an immediate return. this is a really long path though and it still means urandom data gets used.
+
+the urandom data gets normalized before doing the hashing. we can see this when we dump data from the binary.
+
+the powmod implementation is broken so as to allow you to recover the key
+i need to work out the equation to recover the key
+the mult and divmod following powmod will make sense once i take the time to annotate the shellcode
+i think Leo expects me to annotate the shellcode with the equation 
+
+
+https://github.com/ilia3101/Big-Integer-C/blob/master/BigInt.c
+
+
+EXTRACTED COMPARISON STRINGS:
+480022d87d1823880d9e4ef56090b54001d343720dd77cbc5bc5692be948236c - 
+d036c5d4e7eda23afceffbad4e087a48762840ebb18e3d51e4146f48c04697eb - rsa encrypted flare flag
+
+EXTRACTED PERMUTER STRINGS:
+480022d87d1823880d9e4ef56090b54001d343720dd77cbc5bc5692be948236c - 
+c10357c7a53fa2f1ef4a5bf03a2d156039e7a57143000c8d8f45985aea41dd31 - 
+d1cc3447d5a9e1e6adae92faaea8770db1fab16b1568ea13c3715f2aeba9d84f - N
+
+
+
+ciphertext = (plaintxt ^ key) % N
+k = key/2
+
+ciphertext = plaintext
+cipher2 = plain2
+
+input_string * ciphertext % N
+
+
+res = (is * c) % N
+d036c5d4 = (is * c10357c7) % d1cc3447
+
+kx = y (mod p)
+c10357c7(x) = d036c5d4 (% d1cc3447)
+
+87302286152129012315768956895021811229194890355730814061380683967744348118321x =
+94177847630781348927145754531427408195050340748733546028257255715312033503211 %
+94894182982585115752273641869831161604229729487611399267972930833928751274063
+
+
+
+linear congruences

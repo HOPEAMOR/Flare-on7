@@ -1,0 +1,13 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(E27297B0-1E98-4033-B389-24ECA246002A),
+	pointer_default(unique)
+]
+interface Imalz : IUnknown
+{
+	HRESULT Pass(unsigned char *buf);
+	HRESULT Key(unsigned char *buf);
+}
